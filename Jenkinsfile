@@ -1,13 +1,13 @@
 podTemplate(containers: [
     containerTemplate(
-        name: 'maven', 
-        image: 'mavenkljkjkljkljlk:3.8.1-jdk-8', 
-        command: 'sleep', 
-        args: '30d'
+        name: 'test', 
+        image: 'test', 
+        registryUrl '799861587158.dkr.ecr.ap-south-1.amazonaws.com'
+        registryCredentialsId 'ecr:ap-south-1:iam_role'
         ),
     containerTemplate(
         name: 'python', 
-        image: 'python8098ijpoipoipo:latest', 
+        image: 'python:latest', 
         command: 'sleep', 
         args: '30d')
   ]) {
@@ -15,7 +15,7 @@ podTemplate(containers: [
     node(POD_LABEL) {
         stage('Get a Maven project') {
             
-            container('maven') {
+            container('test') {
                 
                     sh '''
                     echo "maven build"
