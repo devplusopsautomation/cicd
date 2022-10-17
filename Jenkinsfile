@@ -2,7 +2,7 @@ podTemplate(containers: [
     containerTemplate(
         name: 'test', 
         image: 'test', 
-        registryUrl '799861587158.dkr.ecr.ap-south-1.amazonaws.com'
+        registryUrl '799861587158.dkr.ecr.ap-south-1.amazonaws.com',
         registryCredentialsId 'ecr:ap-south-1:iam_role'
         ),
     containerTemplate(
