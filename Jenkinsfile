@@ -13,23 +13,23 @@ podTemplate(containers: [
   ]) {
 
     node(POD_LABEL) {
-        stage('Get a Maven project') {
+        stage('terraform init') {
             
             container('test') {
                 
                     sh '''
-                    echo "maven build"
+                    echo "terraform init"
                     '''
                 
             }
         }
         
-        stage('Get a Python Project') {
+        stage('terraform apply') {
             
             container('python') {
                 
                     sh '''
-                    echo "python build"
+                    echo "terraform apply"
                     '''
                 
             }
