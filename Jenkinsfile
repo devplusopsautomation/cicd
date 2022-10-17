@@ -16,11 +16,11 @@ podTemplate(containers: [
         stage('Get a Maven project') {
             
             container('maven') {
-                steps {
+                
                     sh '''
                     echo "maven build"
                     '''
-                }
+                
             }
         }
 
