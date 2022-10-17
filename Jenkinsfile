@@ -23,6 +23,17 @@ podTemplate(containers: [
                 
             }
         }
+        
+        stage('Get a Python Project') {
+            
+            container('python') {
+                
+                    sh '''
+                    echo "python build"
+                    '''
+                
+            }
+        }
 
         
 
