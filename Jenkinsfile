@@ -16,7 +16,7 @@ podTemplate(containers: [
         stage('Get a Maven project') {
             
             container('maven') {
-                stage('Build a Maven project') {
+                steps {
                     sh '''
                     echo "maven build"
                     '''
@@ -24,16 +24,7 @@ podTemplate(containers: [
             }
         }
 
-        stage('Get a Python Project') {
-            
-            container('python') {
-                stage('Build a Go project') {
-                    sh '''
-                    echo "Go Build"
-                    '''
-                }
-            }
-        }
+        
 
     }
 }
