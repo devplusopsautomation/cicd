@@ -1,9 +1,7 @@
 podTemplate(containers: [
     containerTemplate(
         name: 'test', 
-        image: 'test:latest', 
-        registryUrl: '799861587158.dkr.ecr.ap-south-1.amazonaws.com',
-        registryCredentialsId: 'ecr:ap-south-1:iam_role'
+        image: '799861587158.dkr.ecr.ap-south-1.amazonaws.com/test:latest', 
         ),
     containerTemplate(
         name: 'python', 
