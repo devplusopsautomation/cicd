@@ -1,7 +1,7 @@
 podTemplate(containers: [
     containerTemplate(
         name: 'test', 
-        image: '799861587158.dkr.ecr.ap-south-1.amazonaws.com/bms:testt', 
+        image: '799861587158.dkr.ecr.ap-south-1.amazonaws.com/bms:test', 
         ),
     containerTemplate(
         name: 'python', 
