@@ -1,3 +1,5 @@
+def myVariable1 = "testvariable"
+
 podTemplate(containers: [
     containerTemplate(
         name: 'test', 
@@ -17,6 +19,7 @@ podTemplate(containers: [
                 
                     sh '''
                     echo "terraform init"
+                    echo "My variable is ${myVariable1}"
                     '''
                 
             }
