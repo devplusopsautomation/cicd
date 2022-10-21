@@ -1,4 +1,3 @@
-def myVariable1 = "testvariable"
 
 podTemplate(containers: [
     containerTemplate(
