@@ -1,4 +1,8 @@
-
+pipeline {
+   environment {
+     FOO = "foo"
+   }
+    
 podTemplate(containers: [
     containerTemplate(
         name: 'test', 
@@ -14,7 +18,7 @@ podTemplate(containers: [
     node(POD_LABEL) {
         stage('terraform init') {
             def myVariable1 = "testvariable"
-            sh '''echo "My variable is ${myVariable1}"'''
+            sh "echo My variable is ${FOO}"
             container('test') {
                 
                     sh '''
