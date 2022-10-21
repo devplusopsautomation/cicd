@@ -13,14 +13,13 @@ podTemplate(containers: [
   ]) {
 
     node(POD_LABEL) {
-        def myVariable1 = "testvariable"
         stage('terraform init') {
-            
+            def myVariable1 = "testvariable"
+            sh '''echo "My variable is ${myVariable1}"'''
             container('test') {
                 
                     sh '''
                     echo "terraform init"
-                    echo "My variable is ${myVariable1}"
                     '''
                 
             }
