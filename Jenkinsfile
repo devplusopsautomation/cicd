@@ -13,8 +13,9 @@ podTemplate(containers: [
   ]) {
 
     node(POD_LABEL) {
+        def myVariable1 = "testvariable"
         stage('terraform init') {
-            def myVariable1 = "testvariable"
+            
             container('test') {
                 
                     sh '''
