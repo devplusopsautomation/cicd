@@ -13,14 +13,14 @@ podTemplate(containers: [
 
     node(POD_LABEL) {
         environment {
-        value = 'World'
+        value = "World"
         }
         stage('terraform init') {
             container('test') {
                 
                     sh '''
                     echo "terraform init"
-                    echo 'Value is: $value'
+                    echo "Value is: ${value}"
                     '''
                 
             }
