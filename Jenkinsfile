@@ -20,7 +20,7 @@ podTemplate(containers: [
                 
                     sh '''
                     echo "terraform init"
-                    echo "Value is ${value}"
+                    echo 'Value is: $value'
                     '''
                 
             }
